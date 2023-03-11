@@ -2,5 +2,42 @@
 .sobreMi {
     width: 100%;
     height: 500px;
-    background-color: blue;
+    background-color: rgb(31, 31, 31);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    bottom: 6rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardImg {
+    width: 100%;
+    height: 20rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardImg img{
+    position: relative;
+    bottom: 2rem;
+    width: 90%;
+    height: fit-content;
+}
+
+.info{
+    color: white;
+}
+
+@media (max-width: 541px) {
+    .sobreMi {
+        justify-content: center;
+    }
 }
