@@ -4,20 +4,38 @@
     width: 100%;
     height: 100vh;
     display: flex;  
-    flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 2.5rem;
 }
 
-.imageHome {
-    align-self: center;
-    background-image: url('./image/astronauta.png');
-    background-repeat: no-repeat;
-    background-size:calc(120%);
-    background-position:calc(50px);
-    width: 400px;
-    height: 400px;
-    z-index: 1;
+.card {
+    padding: 2rem;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.cardImg {
+    width: 15rem;
+    height: 15rem;
+    background-color: gold;
+    background-image: url('./image/perfil.png');
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.info{
+    color: rgb(255, 254, 254);
+    font-family: 'Sono', sans-serif;
+}
+
 
 .saludo {
     align-self: center;
@@ -39,6 +57,9 @@
 }
 
 @media (max-width: 540px) {
+    .card {
+        margin-top: 2rem;
+    }
     .saludo {
         padding: 0 3rem 10rem;
         margin: auto;
@@ -50,11 +71,6 @@
         padding: 0;
         position: relative;
         bottom: 10rem;
-        margin: auto;
-    }
-    .imageHome {
-        position: relative;
-        bottom: 5rem;
         margin: auto;
     }
     

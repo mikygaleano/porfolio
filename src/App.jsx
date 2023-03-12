@@ -1,7 +1,6 @@
 import Header from "./component/Header/Header"
 import Home from './component/Home/Home'
-import SobreMi from "./component/SobreMi/SobreMi"
-import { particles } from './component/utils/utils'
+import Skills from "./component/Skills/Skills"
 import style from './index.module.css'
 
 
@@ -15,19 +14,16 @@ function App() {
     },
     {
       id: 2,
-      item: 'Sobre mí',
-      ruta: '#sobreMi'
+      item: 'Skills',
+      ruta: '#skills'
     }
   ] 
 
   return (
     <div className={style.main}>
       <Header array={array}/>
-      {
-        particles()
-      }
       <Home/>
-      <SobreMi/>
+      <Skills/>
     </div>
   )
 }
