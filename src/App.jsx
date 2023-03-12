@@ -1,6 +1,9 @@
 import Header from "./component/Header/Header"
 import Home from './component/Home/Home'
 import SobreMi from "./component/SobreMi/SobreMi"
+import { particles } from './component/utils/utils'
+import style from './index.module.css'
+
 
 function App() {
 
@@ -18,8 +21,11 @@ function App() {
   ] 
 
   return (
-    <div>
+    <div className={style.main}>
       <Header array={array}/>
+      {
+        particles()
+      }
       <Home/>
       <SobreMi/>
     </div>

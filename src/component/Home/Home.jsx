@@ -2,42 +2,9 @@ import style from './Home.module.css'
 
 export default function Home () {
 
-    
-
     return (
         <section className={style.home} id='home'>
-            <div  id="particle-container">
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-                <div className={style.particle}></div>
-            </div>
+
             <figure className={style.imageHome}>
             </figure>
             <div className={style.saludo}>
