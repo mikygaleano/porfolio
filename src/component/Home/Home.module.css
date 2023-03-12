@@ -10,7 +10,6 @@
 }
 
 .card {
-    padding: 2rem;
     width: 15rem;
     display: flex;
     flex-direction: column;
@@ -57,21 +56,18 @@
 }
 
 @media (max-width: 540px) {
-    .card {
-        margin-top: 2rem;
-    }
+    
     .saludo {
-        padding: 0 3rem 10rem;
-        margin: auto;
+        margin-top: 8rem;
+    }
+    .home {
+        gap: -5rem;
     }
     
 }
 @media (max-width: 281px) {
     .saludo {
-        padding: 0;
-        position: relative;
-        bottom: 10rem;
-        margin: auto;
+       text-align: left;
     }
     
 }

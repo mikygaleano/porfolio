@@ -9,6 +9,11 @@ export default function Home () {
             {
                 particles()
             }
+            <div className={style.saludo}>
+                <span>Hola soy, Developer web</span>
+                <h1>Michael Galeano</h1>
+                <button>Contactame</button>
+            </div>
             <div className={style.card}>
                 <figure className={style.cardImg}>
                    
@@ -21,11 +26,6 @@ export default function Home () {
                         desde el 2023. 
                     </p>
                 </article>
-            </div>
-            <div className={style.saludo}>
-                <span>Hola soy, Developer web</span>
-                <h1>Michael Galeano</h1>
-                <button>Contactame</button>
             </div>
         </section>
     )
