@@ -17,13 +17,66 @@ function App() {
       item: 'Skills',
       ruta: '#skills'
     }
-  ] 
+  ];
+
+  const listaSkills = [
+    {
+      id: 1,
+      icon: './icon/html-5.png',
+      name: 'html-5'
+    },
+    {
+      id: 2,
+      icon: './icon/css.png',
+      name: 'css'
+    },
+    {
+      id: 3,
+      icon: './icon/github.png',
+      name: 'github'
+    },
+    {
+      id: 4,
+      icon: './icon/git.png',
+      name: 'git'
+    },
+    {
+      id: 5,
+      icon: './icon/javascript.png',
+      name: 'javascript'
+    },
+    {
+      id: 6,
+      icon: './icon/piton.png',
+      name: 'python'
+    },
+    {
+      id: 7,
+      icon: './icon/react.png',
+      name: 'react'
+    },
+  ];
+
+  const estudiosLista = [
+    {
+      id: 1,
+      title: 'Introducción a python',
+      fecha: 'Diciembre 2022',
+      text: 'Curso introductorio de python, dictado por la UNDAV',
+    },
+    {
+      id: 2,
+      title: 'Prep Curs',
+      fecha: 'Diciembre 2020',
+      text: 'Curso introductorio a javascript, dictado por Soy Henry',
+    },
+  ]
 
   return (
     <div className={style.main}>
       <Header array={array}/>
       <Home/>
-      <Skills/>
+      <Skills lista={listaSkills} estudios={estudiosLista}/>
     </div>
   )
 }
