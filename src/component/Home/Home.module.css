@@ -22,7 +22,7 @@
     width: 15rem;
     height: 15rem;
     background-color: gold;
-    background-image: url('./image/perfil.png');
+    background-image: url(./image/perfil.png);
     background-position: center;
     background-size: contain;
     display: flex;
