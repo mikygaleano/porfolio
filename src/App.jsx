@@ -1,5 +1,6 @@
 import Header from "./component/Header/Header"
 import Home from './component/Home/Home'
+import Proyects from "./component/Proyects/Proyects";
 import Skills from "./component/Skills/Skills"
 import style from './index.module.css'
 
@@ -16,6 +17,11 @@ function App() {
       id: 2,
       item: 'Skills',
       ruta: '#skills'
+    }, 
+    {
+      id: 3,
+      item: 'Proyects',
+      ruta: '#proyects'
     }
   ];
 
@@ -70,6 +76,19 @@ function App() {
       fecha: 'Diciembre 2020',
       text: 'Curso introductorio a javascript, dictado por Soy Henry',
     },
+  ];
+
+  const proyects = [
+    {
+      id: 1,
+      link: 'https://mikygaleano.github.io/pokeinfo/',
+      title: 'pokeinfo'
+    },
+    {
+      id: 2,
+      link: 'https://mikygaleano.github.io/lista-de-tareas/',
+      title: 'lista de tareas'
+    }
   ]
 
   return (
@@ -77,6 +96,7 @@ function App() {
       <Header array={array}/>
       <Home/>
       <Skills lista={listaSkills} estudios={estudiosLista}/>
+      <Proyects cards={proyects}/>
     </div>
   )
 }
