@@ -12,6 +12,15 @@
     color: gold;
 }
 
+.conteinerPrincipal {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: auto;
+    padding: 2rem;
+}
+
 
 .conteinerTec {
     width: 80%;

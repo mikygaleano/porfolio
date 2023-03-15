@@ -9,23 +9,25 @@ export default function Home () {
             {
                 particles()
             }
-            <div className={style.saludo}>
-                <span>Hola soy, Developer web</span>
-                <h1>Michael Galeano</h1>
-                <button>Contactame</button>
-            </div>
-            <div className={style.card}>
-                <figure className={style.cardImg}>
-                   
-                </figure>
-                <article className={style.info}>
-                    <p>
-                        estudiante de ingeneria <br />
-                        en informatica en la Universidad<br />
-                        Nacional de Avellaneda (UNDAV)<br />
-                        desde el 2023. 
-                    </p>
-                </article>
+            <div className={style.conteinerPrincipal}>
+                <div className={style.saludo}>
+                    <span>Hola soy, Developer web</span>
+                    <h1>Michael Galeano</h1>
+                    <button>Contactame</button>
+                </div>
+                <div className={style.card}>
+                    <figure className={style.cardImg}>
+                    
+                    </figure>
+                    <article className={style.info}>
+                        <p>
+                            estudiante de ingeneria <br />
+                            en informatica en la Universidad<br />
+                            Nacional de Avellaneda (UNDAV)<br />
+                            desde el 2023. 
+                        </p>
+                    </article>
+                </div>
             </div>
         </section>
     )
