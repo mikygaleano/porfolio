@@ -10,7 +10,7 @@ function App() {
   const array = [
     {
       id: 1,
-      item: 'Home',
+      item: 'Inicio',
       ruta: '#home'
     },
     {
@@ -20,7 +20,7 @@ function App() {
     }, 
     {
       id: 3,
-      item: 'Proyects',
+      item: 'Proyectos',
       ruta: '#proyects'
     }
   ];
@@ -82,12 +82,14 @@ function App() {
     {
       id: 1,
       link: 'https://mikygaleano.github.io/pokeinfo/',
-      title: 'pokeinfo'
+      title: 'pokeinfo',
+      image: './image/pokeinfo.png'
     },
     {
       id: 2,
       link: 'https://mikygaleano.github.io/lista-de-tareas/',
-      title: 'lista de tareas'
+      title: 'lista de tareas',
+      image: './image/lista-de-tareas.png'
     }
   ]
 

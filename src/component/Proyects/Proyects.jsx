@@ -11,8 +11,12 @@ export default function Proyects (props) {
             <div className={style.conteinerPrincipal}>
                {
                 props.cards.map(e => {
-                    return <article key={e.id}>
+                    return <article key={e.id} className={style.cardsProyects}>
                                 <a href={e.link}>{e.title}</a>
+
+                                <figure>
+                                    <a href={e.link}><img src={e.image} alt={e.title} /></a>
+                                </figure>
                             </article>
                 })
                }
