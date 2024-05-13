@@ -26,15 +26,13 @@
 
 <script>
 
-    const text: string[] = ['programador web', 'estudiante de Ing. en informatica']
+    const text: string[] = ['programador', 'Ing. informatico']
 
     let index:number = 0
 
     const  useWriteTypeMachine = async (text: string[])=> {
 
         const element = document.querySelector('.typeMachine');
-
-        console.log(element)
 
         // delay espera (ms) para resolver
         const delay: Promise<unknown> = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -47,7 +45,7 @@
             await delay(150);
         }
 
-        /* await delay(500); // Esperar antes de borrar
+         await delay(500); // Esperar antes de borrar
 
         // borrar
         for (let i = txt.length; i >= 0; i--) {
@@ -56,12 +54,15 @@
         }
 
         await delay(500); // esperar antes de aumentar el index
-        index = index + 1;
+        index += 1;
 
-        if (index === text.length +1) {
+        if (index === text.length) {
           index = 0;
           await delay(200)
-        }*/
+        }
+
+
+        return useWriteTypeMachine(text);
     };
 
     // Espera a que el DOM esté completamente cargado
