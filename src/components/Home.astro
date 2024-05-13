@@ -1,11 +1,11 @@
 ---
 ---
 
-<section class="w-full h-full flex flex-row max-sm:flex-col gap-5 justify-center items-center bg-transparent">
-    <div class="w-full h-48 grid place-content-center text-wrap">
+<section class="w-full h-screen flex flex-row max-sm:flex-col gap-5 justify-center items-center bg-transparent">
+    <div class="w-full grid place-content-center text-wrap m-auto">
         <span class="text-sm font-medium text-blue-900">Hola, bienvenidos</span>
         <h1 class="text-3xl max-md:text-xl font-bold text-fuchsia-950">Mi nombre, es Michael</h1>
-        <h2 class="text-3xl max-md:text-xl font-bold text-fuchsia-950">Soy programador</h2>
+        <h2 class="text-3xl max-md:text-xl font-bold text-fuchsia-950">Soy <span class="typeMachine text-yellow-500 font-extrabold"></span><strong class="animate-pulse">|</strong></h2>
         <div class="w-full pt-3">
             <ul class="w-full flex flex-row gap-1">
                 <li class="w-12 h-12"><a class="w-full h-full" href="https://github.com/mikygaleano" target="_blank"><img class="w-12 h-12 object-fill rounded-full hover:shadow-md" src="./github.svg" alt=""></a></li>
@@ -16,10 +16,56 @@
         </div>
     </div>
     <button class="absolute bottom-5">↓</button>
-    <div class="w-full h-48 grid place-content-center gap-2">
+    <div class="w-full h-48 flex flex-col justify-center items-center gap-2 m-auto max-sm:-mt-5">
         <figure class="w-48 h-48 rounded-full m-auto">
             <img class="object-cover w-full h-full rounded-full bg-blue-400" src="./mi-avatar.jpg" alt="avatar">
         </figure>
         <button class="w-28 h-12 p-1 shadow-md hover:shadow-fuchsia-600 rounded-md bg-fuchsia-950 m-auto text-white hover:font-bold">descargar cv</button>
     </div>
 </section>
+
+<script>
+
+    const text: string[] = ['programador web', 'estudiante de Ing. en informatica']
+
+    let index:number = 0
+
+    const  useWriteTypeMachine = async (text: string[])=> {
+
+        const element = document.querySelector('.typeMachine');
+
+        console.log(element)
+
+        // delay espera (ms) para resolver
+        const delay: Promise<unknown> = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+        let txt = text[index];
+
+        // escribir
+        for (let i = 0; i <= txt.length; i++) {
+            element.innerHTML = txt.slice(0, i);
+            await delay(150);
+        }
+
+        /* await delay(500); // Esperar antes de borrar
+
+        // borrar
+        for (let i = txt.length; i >= 0; i--) {
+            element.innerHTML = txt.slice(0, i);
+            await delay(150);
+        }
+
+        await delay(500); // esperar antes de aumentar el index
+        index = index + 1;
+
+        if (index === text.length +1) {
+          index = 0;
+          await delay(200)
+        }*/
+    };
+
+    // Espera a que el DOM esté completamente cargado
+    document.addEventListener('DOMContentLoaded', () => {
+        useWriteTypeMachine(text);
+    });
+</script>
