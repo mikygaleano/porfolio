@@ -58,14 +58,15 @@
         }
 
         await delay(500); // esperar antes de aumentar el index
-        index += 1;
+        index += 1; // aumentar el index
 
+        // condicion para volver a cero el index
         if (index === text.length) {
           index = 0;
           await delay(200)
         }
 
-
+        // recursividad
         return useWriteTypeMachine(text);
     };
 
