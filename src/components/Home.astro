@@ -1,7 +1,7 @@
 ---
 ---
 
-<section class="w-full min-h-full flex flex-row max-sm:flex-col gap-5 justify-center items-center bg-transparent">
+<section class="w-full h-full flex flex-row max-sm:flex-col justify-center items-center bg-transparent">
     <div class="w-full grid place-content-center text-wrap m-auto">
         <span class="text-sm font-medium text-blue-900">Hola, bienvenidos</span>
         <h1 class="text-3xl max-md:text-xl font-bold text-fuchsia-950">Mi nombre, es Michael</h1>
@@ -15,21 +15,25 @@
             </ul>
         </div>
     </div>
-    <a class="relative -bottom-52 max-sm:hidden w-16 h-16 animate-ping" href="/"><img class="absolute"src="./arrow.svg" alt="arrow"></a>
-    <div class="w-full h-48 flex flex-col justify-center items-center gap-2 m-auto max-sm:-mt-5">
+    <a class="max-sm:hidden relative -bottom-52 w-16 h-16 animate-ping" href="/"><img class="absolute"src="./arrow.svg" alt="arrow"></a>
+    <div class="w-full h-48 flex flex-col justify-center items-center gap-2 m-auto max-sm:-mt-28">
         <figure class="w-48 h-48 rounded-full m-auto">
             <img class="object-cover w-full h-full rounded-full bg-blue-400" src="./mi-avatar.jpg" alt="avatar">
         </figure>
-        <button class="w-28 h-12 p-1 shadow-md hover:shadow-fuchsia-600 rounded-md bg-fuchsia-950 m-auto text-white hover:font-bold">descargar cv</button>
+        <button class="download aw-28 h-12 p-1 shadow-md hover:shadow-fuchsia-600 rounded-md bg-fuchsia-950 m-auto text-white hover:font-bold">descargar cv</button>
     </div>
 </section>
 
 <script>
 
+    const cv = './cv.pdf'
+
     const text: string[] = ['programador', 'Ing. informatico']
 
     let index:number = 0
 
+
+    // function para typear
     const  useWriteTypeMachine = async (text: string[])=> {
 
         const element = document.querySelector('.typeMachine');
@@ -64,6 +68,22 @@
 
         return useWriteTypeMachine(text);
     };
+
+    // descargar cv
+    const handleDownload = () => {
+        const downloadInstance = document.createElement('a');
+        downloadInstance.href = cv;
+        downloadInstance.target = '_blank';
+    
+        document.body.appendChild(downloadInstance);
+
+        downloadInstance.click();
+    
+        document.body.removeChild(downloadInstance);
+      };
+
+    // evento clic para descargar el cv
+    document.querySelector('.download')?.addEventListener('click', handleDownload);
 
     // Espera a que el DOM esté completamente cargado
     document.addEventListener('DOMContentLoaded', () => {
