@@ -78,8 +78,20 @@ const menu = [
     window.addEventListener("resize", adjustNavbar);
 
     hamburger.addEventListener("click", function () {
-        mobileNav.classList.toggle("left-[-70%]");
-        hamburger.classList.toggle("fa-bars");
-        hamburger.classList.toggle("fa-close");
+        if (hamburger) {
+            hamburger.classList.toggle("fa-close");
+            hamburger.classList.toggle("fa-bars");
+            hamburger.addEventListener("click", function () {
+                hamburger.style.display = "none";
+            });
+        }
+
+        if (mobileNav) {
+            mobileNav.classList.toggle("left-[-70%]");
+        }
+
+        if (navItems) {
+            navItems.style.display = "flex";
+        }
     })
 </script>
