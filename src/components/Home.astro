@@ -40,22 +40,26 @@
         const element = document.querySelector('.typeMachine');
 
         // delay espera (ms) para resolver
-        const delay: Promise<unknown> = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+        const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
         let txt = text[index];
 
         // escribir
         for (let i = 0; i <= txt.length; i++) {
-            element.innerHTML = txt.slice(0, i);
-            await delay(150);
+            if (element) {
+                element.innerHTML = txt.slice(0, i);
+                await delay(150);
+            }
         }
 
          await delay(500); // Esperar antes de borrar
 
         // borrar
         for (let i = txt.length; i >= 0; i--) {
-            element.innerHTML = txt.slice(0, i);
-            await delay(150);
+            if (element) {
+                element.innerHTML = txt.slice(0, i);
+                await delay(150);
+            }
         }
 
         await delay(500); // esperar antes de aumentar el index
