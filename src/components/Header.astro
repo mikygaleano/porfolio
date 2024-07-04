@@ -55,45 +55,62 @@ const menu = [
 </header>
 
 <script>
-    var navItems = document.getElementById("navItems");
-    var mobileNav = document.getElementById("mobileNav");
-    var hamburger = document.getElementById("hamburger");
+    let navItems = document.getElementById("navItems");
+    let mobileNav = document.getElementById("mobileNav");
+    let hamburger = document.getElementById("hamburger");
+
+    
+    function responseMenu () {
+
+        let screenWidth = window.innerWidth;
 
 
-    function adjustNavbar() {
-        let screenWidth = parseInt(window.innerWidth);
+        function toggleNavbar (event: any) {
+             
+            screenWidth = window.innerWidth;
 
-        if (screenWidth < 541) {
-            if (navItems && hamburger) {
-                navItems.style.display = "none";
-                hamburger.style.display = "flex";
-            }    
-        }
-        else {
-            if (navItems && hamburger) {
-                navItems.style.display = "flex";
-                hamburger.style.display = "none";
+            if (hamburger && mobileNav && event.target === hamburger) {
+                mobileNav.classList.toggle("left-[-70%]");
+                hamburger.classList.toggle("fa-bars");
+                hamburger.classList.toggle("fa-close");
+                if ( screenWidth > 720 ) {
+                mobileNav?.classList.add("left-[-100%]");
+                } else {
+                    mobileNav?.classList.remove("left-[-100%]");
+
+                }
+            } else {
+                mobileNav?.classList.add("left-[-70%]");
+                
             }
         }
-    }
 
-    adjustNavbar();
+        function adjustNavbar() {
 
-    window.addEventListener("resize", adjustNavbar);
+            screenWidth = window.innerWidth;
 
-    document.addEventListener("click", function (event) {
-        if (hamburger && event.target === hamburger) {
-            hamburger.classList.toggle("fa-close");
-            hamburger.classList.toggle("fa-bars");
-            hamburger.style.display = "none";
+
+            if (screenWidth < 720) {
+                if (navItems) navItems.style.display = 'none';
+                if (hamburger) hamburger.style.display = 'flex';
+            }
+            else {
+                mobileNav?.classList.remove("left-[-70%]");
+                mobileNav?.classList.add("left-[-100%]");
+                if (navItems) navItems.style.display = "flex";
+                if (hamburger) hamburger.style.display = 'none';
+            }
+
         }
+            
 
-        if (mobileNav) {
-            mobileNav.classList.toggle("left-[-70%]");
-        }
+        adjustNavbar();
 
-        if (navItems) {
-            navItems.style.display = "flex";
-        }
-    })
+        window.addEventListener("resize", adjustNavbar);
+
+        document.addEventListener("click", (event) => toggleNavbar(event))
+    };
+
+    responseMenu()
+
 </script>
