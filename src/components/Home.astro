@@ -35,7 +35,7 @@
 
 
     // function para typear
-    const  useWriteTypeMachine = async (text: string[])=> {
+    const  useWriteTypeMachine: (text: string[]) => Promise<never> = async (text: string[])=> {
 
         const element = document.querySelector('.typeMachine');
 
