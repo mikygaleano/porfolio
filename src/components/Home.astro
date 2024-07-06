@@ -1,8 +1,8 @@
 ---
 ---
 
-<section class="w-full h-full bg-transparent flex items-center justify-center" id="home">
-    <div class="w-3/4 max-md:w-full h-full grid grid-cols-2 max-md:flex max-md:flex-col place-content-center">
+<section class="w-full h-full flex items-center justify-center" id="home">
+    <div class="w-3/4 max-md:w-screen h-full grid grid-cols-2 max-md:flex max-md:flex-col place-content-center">
         <div class="w-full grid place-content-center text-wrap m-auto max-sm:self-center">
             <span class="text-xl font-medium text-blue-900">¡Hola, bienvenidos!</span>
             <h1 class="text-3xl max-md:text-xl font-bold text-fuchsia-950">Mi nombre es Michael</h1>
@@ -18,9 +18,21 @@
         </div>
         <div class="w-full h-48 flex flex-col justify-center items-center gap-4 m-auto max-sm:-mt-8">
             <figure class="w-48 h-48 rounded-full">
-                <img class="object-cover w-full h-full rounded-full bg-blue-400 shadow-md" src="./mi-avatar.jpg" alt="avatar">
+                <img class="object-cover w-full h-full rounded-full bg-yellow-500 shadow-md" src="./mi-avatar.jpg" alt="avatar">
             </figure>
-            <button class="download aw-28 h-12 p-1 shadow-md hover:shadow-fuchsia-600 rounded-md bg-fuchsia-950 m-auto text-white hover:font-bold">descargar cv</button>
+            <div class="max-w-7xl mx-auto">
+                <div class="relative group cursor-pointer">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-red-600 to-violet-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
+                    </div>
+                    <div
+                        class="relative px-7 py-6 bg-white ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6">
+                        <div class="space-y-2">
+                            <button class="text-slate-800 download">Descargar CV</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
