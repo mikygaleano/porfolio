@@ -1,0 +1,21 @@
+/* global.css */
+
+section {
+    view-timeline-name: --reveal;
+    animation-name: show;
+    animation-fill-mode: both;
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: scale(10%);
+    }
+    to {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
