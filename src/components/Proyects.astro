@@ -28,7 +28,7 @@ const proyects = [
 
 <section class="w-full h-screen flex flex-col justify-start items-center max-md:grid max-md:place-content-center gap-3" id="proyects">
     <h2 class="mb-10 text-center font-semibold text-3xl">Proyectos</h2>
-    <div class="w-10/12 h-full flex max-md:flex-col flex-row flex-wrap gap-3 justify-start items-center">
+    <div class="w-10/12 h-full flex max-md:flex-col flex-row flex-wrap gap-3 justify-start items-center pl-20 pr-20 max-md:p-0">
         {
             proyects.map(({title, body, skills, href, image, alt}) => 
                 <CardProyect title={title} image={image} alt={alt} body={body} skills={skills} href={href}/>
