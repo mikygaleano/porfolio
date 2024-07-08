@@ -1,0 +1,38 @@
+---
+import CardProyect from './CardProyect.astro';
+
+const proyects = [
+    {
+        title: 'to-do-list',
+        body: 'Proyecto en donde diseñe mi primer web',
+        skills: [{
+            skill: 'JAVASCRIPT',
+            tag: 'js-tag',
+            fa: 'fa-js'
+        }, {
+            skill: 'HTML',
+            tag: 'html-tag',
+            fa: 'fa-html5'
+        }, {
+            skill: 'CSS',
+            tag: 'css-tag',
+            fa: 'fa-css3-tag'
+        }
+            ],
+        href: '/',
+        image: 'https://picsum.photos/350/200',
+        alt: 'Proyect cover'
+    }
+]
+---
+
+<section class="w-full h-screen flex flex-col justify-start items-center max-md:grid max-md:place-content-center gap-3" id="proyects">
+    <h2 class="mb-10 text-center font-semibold text-3xl">Proyectos</h2>
+    <div class="w-10/12 h-full flex max-md:flex-col flex-row flex-wrap gap-3 justify-start items-center">
+        {
+            proyects.map(({title, body, skills, href, image, alt}) => 
+                <CardProyect title={title} image={image} alt={alt} body={body} skills={skills} href={href}/>
+            )
+        }
+    </div>
+</section>
