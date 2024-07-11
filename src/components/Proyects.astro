@@ -3,24 +3,25 @@ import CardProyect from './CardProyect.astro';
 
 const proyects = [
     {
-        title: 'to-do-list',
-        body: 'Proyecto en donde diseñe mi primer web',
+        title: 'MaikiApuntes',
+        body: 'Proyecto pensado para compartir mi viaje en forma de apuntes aprendiendo programación',
         skills: [{
             skill: 'JAVASCRIPT',
             tag: 'js-tag',
             fa: 'fa-js'
         }, {
-            skill: 'HTML',
+            skill: 'Astro',
             tag: 'html-tag',
-            fa: 'fa-html5'
+            fa: 'fa-astrojs'
         }, {
-            skill: 'CSS',
-            tag: 'css-tag',
+            skill: 'Tailwindcss',
+            tag: 'tailwindcss-tag',
             fa: 'fa-css3-tag'
         }
             ],
-        href: '/',
-        image: 'https://picsum.photos/350/200',
+        hrefRepo: 'https://github.com/mikygaleano/my-blog-maikidev',
+        hrefWeb: 'https://maikiblog.netlify.app/',
+        image: './blogApuntes.png',
         alt: 'Proyect cover'
     }
 ]
@@ -30,8 +31,8 @@ const proyects = [
     <h2 class="mb-10 text-center font-semibold text-3xl">Proyectos</h2>
     <div class="w-10/12 h-full flex max-md:flex-col flex-row flex-wrap gap-3 justify-start items-center pl-20 pr-20 max-md:p-0">
         {
-            proyects.map(({title, body, skills, href, image, alt}) => 
-                <CardProyect title={title} image={image} alt={alt} body={body} skills={skills} href={href}/>
+            proyects.map(({title, body, skills, hrefRepo, hrefWeb, image, alt}) => 
+                <CardProyect title={title} image={image} alt={alt} body={body} skills={skills} hrefRepo={hrefRepo} hrefWeb={hrefWeb}/>
             )
         }
     </div>

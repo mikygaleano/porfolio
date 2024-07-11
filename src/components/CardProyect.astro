@@ -10,10 +10,11 @@ interface Props {
         tag: string,
         fa: string
     }[];
-	href: string;
+    hrefWeb: string;
+	hrefRepo: string;
 }
 
-const { href, image, alt, title, skills, body } = Astro.props;
+const { hrefRepo, hrefWeb, image, alt, title, skills, body } = Astro.props;
 ---
 
 
@@ -30,12 +31,12 @@ const { href, image, alt, title, skills, body } = Astro.props;
                     )
                 }
             </div>
-            <div class="flex flex-col gap-3">
-                <a href={href} class="card-link">
-                    <i class="fab fa-github"></i> Ver codigo
+            <div class="flex flex-row gap-3">
+                <a href={hrefRepo} class="card-link" target="_blank">
+                    <i class="fab fa-github"></i>codigo
                 </a>
-                <a href={href} class="card-link">
-                    <i class="fab"></i> Ver web
+                <a href={hrefWeb} class="card-link" target="_blank">
+                    <i class="fab"></i>web
                 </a>
             </div>
         </div>
@@ -54,6 +55,7 @@ const { href, image, alt, title, skills, body } = Astro.props;
 
         .card {
             width: 350px;
+            height: 500px;
             background: black;
             border-radius: 20px;
             overflow: hidden;
@@ -78,7 +80,6 @@ const { href, image, alt, title, skills, body } = Astro.props;
 
         .card:hover .card-image {
             transform: scale(1.1);
-            filter: brightness(1.2) contrast(1.2);
         }
 
         .card-content {
@@ -134,7 +135,8 @@ const { href, image, alt, title, skills, body } = Astro.props;
         .js-tag { color: #F0DB4F; }
 
         .card-link {
-            width: 200px;
+            width: 150px;
+            height: 50px;
             display: flex;
             flex-direction: row;
             justify-content: center;
