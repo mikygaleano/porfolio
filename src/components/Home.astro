@@ -1,8 +1,10 @@
 ---
+
+const miAvatar = './mi-avatar.jpg'
 ---
 
 <section class="w-full h-full flex items-center justify-center" id="home">
-    <div class="w-3/4 max-md:w-screen h-full grid grid-cols-2 max-md:flex max-md:flex-col place-content-center">
+    <div class="w-3/4 max-md:w-screen grid grid-cols-2 max-md:flex max-md:flex-col place-content-center">
         <div class="w-full grid place-content-center text-wrap m-auto max-sm:self-center">
             <span class="text-xl font-medium text-blue-900">¡Hola, bienvenidos!</span>
             <h1 class="text-3xl max-md:text-xl font-bold text-fuchsia-950">Mi nombre es Michael</h1>
@@ -16,9 +18,12 @@
                 </ul>
             </div>
         </div>
-        <div class="w-full h-48 flex flex-col justify-center items-center gap-4 m-auto max-sm:-mt-8">
+        <div class="w-full flex flex-col justify-center items-center gap-4 m-auto max-sm:-mt-8">
             <figure class="w-48 h-48 rounded-full">
-                <img class="object-cover w-full h-full rounded-full bg-yellow-500 shadow-md" src="./mi-avatar.jpg" alt="avatar">
+                {
+                    miAvatar?<img class="object-cover w-full h-full rounded-full bg-yellow-500 shadow-md" src={miAvatar} alt="avatar">
+                    :<p class="text-black">Cargando...</p>
+                }   
             </figure>
             <div class="max-w-7xl mx-auto">
                 <div class="relative group cursor-pointer">
