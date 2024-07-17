@@ -8,7 +8,7 @@ interface Props {
     skills: {
         skill: string,
         tag: string,
-        fa: string
+        icon: string
     }[];
     hrefWeb: string;
 	hrefRepo: string;
@@ -26,8 +26,8 @@ const { hrefRepo, hrefWeb, image, alt, title, skills, body } = Astro.props;
             <p class="card-description animate__animated animate__fadeIn">{body}</p>
             <div class="card-languages animate__animated animate__fadeIn">
                 {
-                    skills.map(({skill, tag, fa}) => 
-                        <span class={`language-tag ${tag}`}><i class={`fab ${fa}`}></i>{skill}</span>
+                    skills.map(({skill, tag, icon}) => 
+                        <span class={`language-tag ${tag}`}><img class={`icon`} src={icon}></img>{skill}</span>
                     )
                 }
             </div>
@@ -112,11 +112,12 @@ const { hrefRepo, hrefWeb, image, alt, title, skills, body } = Astro.props;
         .language-tag {
             display: flex;
             align-items: center;
-            gap: 6px;
+            justify-content: center;
+            gap: 3px;
             padding: 6px 12px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
-            font-size: 14px;
+            font-size: 10px;
             color: #fff;
             transition: all 0.3s ease;
         }
@@ -130,9 +131,15 @@ const { hrefRepo, hrefWeb, image, alt, title, skills, body } = Astro.props;
             font-size: 16px;
         }
 
+        .icon {
+            width: 10px;
+            height: 10px;
+        }
+
         .html-tag { color: #E44D26; }
         .css-tag { color: #264DE4; }
         .js-tag { color: #F0DB4F; }
+        .tailwindcss-tag {color: #2bebcb;}
 
         .card-link {
             width: 150px;
