@@ -17,17 +17,17 @@ const arraySocialMedia = [
 ]
 ---
 
-<footer class="w-full h-[250px] text-xs bg-yellow-500 flex m-auto">
+<footer class="w-full h-[250px] text-xs bg-slate-300 flex m-auto">
   <div class="w-11/12 flex flex-row p-2 m-auto">
     <div class="max-w-[66%] h-4/5 max-md:h-full flex flex-col gap-1 pt-3 pr-3 border-white border-r-[1px]">
-      <p class="text-white">¡Más información sobre mis proyectos en...</p>
+      <p class="text-black">¡Más información sobre mis proyectos en...</p>
       {
         arraySocialMedia.map(({ platform, username }) => 
           <SocialMediaFooter platform={platform} username={username}/>
         )
       }
     </div>
-    <div class="max-w-full pt-3 pl-2 flex flex-col text-white">
+    <div class="max-w-full pt-3 pl-2 flex flex-col text-black">
         <span>Echo con mucho amor</span>
         <span class="">© 2024 Michael N. Galeano</span>
     </div>

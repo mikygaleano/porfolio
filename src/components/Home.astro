@@ -8,32 +8,32 @@ const miAvatar = './mi-avatar.jpg'
         <div class="w-full grid place-content-center text-wrap m-auto max-sm:self-center">
             <span class="text-xl font-medium text-blue-900">¡Hola, bienvenidos!</span>
             <h1 class="text-3xl max-md:text-xl font-bold text-fuchsia-950">Mi nombre es Michael</h1>
-            <h2 class="text-3xl max-md:text-xl font-bold text-fuchsia-950">Soy <span class="typeMachine text-yellow-500 font-extrabold"></span><strong class="animate-pulse">|</strong></h2>
+            <h2 class="text-3xl max-md:text-xl font-bold text-fuchsia-950">Soy <span class="typeMachine text-black font-extrabold"></span><strong class="text-black animate-pulse">|</strong></h2>
             <div class="w-full pt-3">
                 <ul class="w-full flex flex-row gap-1">
-                    <li class="w-12 h-12"><a class="w-full h-full" href="https://github.com/mikygaleano" target="_blank"><img class="w-12 h-12 object-fill rounded-full hover:shadow-md" src="./github.svg" alt=""></a></li>
-                    <li class="w-12 h-12"><a class="w-full h-full" href="https://linkedin.com/in/michaelgaleano" target="_blank"><img class="w-12 h- object-fill rounded-full hover:shadow-md" src="./linkedin.svg" alt=""></a></li>
-                    <li class="w-12 h-12"><a class="w-full h-full" href="https://twitter.com/maikiidev" target="_blank"><img class="w-12 h-12 object-fill rounded-full hover:shadow-md" src="./twitter.svg" alt=""></a></li>
-                    <li class="w-12 h-12"><a class="w-full h-full" href="https://instagram.com/maikidev" target="_blank"><img class="w-12 h-12 object-fill rounded-full hover:shadow-md" src="./instagram.svg" alt=""></a></li>
+                    <li class="w-12 h-12"><a class="w-full h-full" href="https://github.com/mikygaleano" target="_blank"><img class="w-12 h-12 object-fill rounded-full shadow-md" src="./github.svg" alt=""></a></li>
+                    <li class="w-12 h-12"><a class="w-full h-full" href="https://linkedin.com/in/michaelgaleano" target="_blank"><img class="w-12 h- object-fill rounded-full shadow-md" src="./linkedin.svg" alt=""></a></li>
+                    <li class="w-12 h-12"><a class="w-full h-full" href="https://twitter.com/maikiidev" target="_blank"><img class="w-12 h-12 object-fill rounded-full shadow-md" src="./twitter.svg" alt=""></a></li>
+                    <li class="w-12 h-12"><a class="w-full h-full" href="https://instagram.com/maikidev" target="_blank"><img class="w-12 h-12 object-fill rounded-full shadow-md" src="./instagram.svg" alt=""></a></li>
                 </ul>
             </div>
         </div>
         <div class="w-full h-48 flex flex-col justify-center items-center gap-4 m-auto max-sm:-mt-8">
             <figure class="w-48 h-48 rounded-full">
                 {
-                    miAvatar?<img class="object-cover w-full h-full rounded-full bg-yellow-500 shadow-md" src={miAvatar} alt="avatar">
+                    miAvatar?<img class="object-cover w-full h-full rounded-full shadow-md" src={miAvatar} alt="avatar">
                     :<p class="text-black">Cargando...</p>
                 }   
             </figure>
             <div class="max-w-7xl mx-auto">
                 <div class="relative group cursor-pointer">
                     <div
-                        class="absolute -inset-1 bg-gradient-to-r from-red-600 to-violet-600 rounded-lg blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
+                        class="absolute -inset-1 bg-gradient-to-r from-red-600 to-violet-600 rounded-full blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
                     </div>
                     <div
-                        class="relative px-7 py-6 bg-transparent bg-opacity-10 ring-1 ring-gray-900/5 border-yellow-200 border-[3px] rounded-lg leading-none flex items-top justify-start space-x-6">
+                        class="relative px-7 py-6 bg-green-500 ring-1 ring-gray-900/5 rounded-full leading-none flex items-top justify-start space-x-6">
                         <div class="space-y-2">
-                            <button class="text-slate-800 download">Descargar CV</button>
+                            <button class="text-slate-200 download">Descargar CV</button>
                         </div>
                     </div>
                 </div>
