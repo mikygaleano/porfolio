@@ -9,7 +9,7 @@ const exper = [
     {
         fecha: 'Marzo 2023',
         puesto: 'programador web',
-        parrafo: ['Fui integrante, como desarrollador en un equipo de la startup identikit app.', 'Para desarrollar una web informativa para una aseguradora']
+        parrafo: ['Fui integrante como desarrollador en un equipo de la startup identikit app.', 'Para desarrollar una web informativa para una aseguradora']
     }
 ];
 
@@ -22,20 +22,20 @@ const exper = [
             <h2 class="font-semibold text-3xl text-center">Experiencia laboral</h2>
         </div>
         <div class="h-fit flex flex-col items-center mt-10">
-            <div class="w-full h-fit flex flex-col gap-10 border-l border-yellow-200">
+            <div class="w-full h-fit flex flex-col gap-10 border-l border-black">
                 {
                 
                     exper.map(item => (
                         <article class="w-full h-fit relative -left-1.5 mt-2">
                             <div class="flex flex-row items-center gap-3">
-                                <div class="w-3 h-3 rounded-full bg-black relative"></div>
+                                <div class="w-3 h-3 rounded-full bg-blue-600 relative"></div>
                                 <h4 class="text-blue-600 font-semibold text-xs">{item.fecha}</h4>                            
                             </div>
                             <div class="max-w-fit p-5">
                                 <h4 class="text-orange-700 font-semibold text-xl">{item.puesto}</h4>
                                 {
                                     item.parrafo.map((linea) => (
-                                        <p class="max-w-96 font-semibold text-xl text-wrap">{linea}</p>
+                                        <p class="max-w-96 text-xl text-wrap">{linea}</p>
                                     ))
                                 }
                             </div>
