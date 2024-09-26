@@ -22,7 +22,8 @@ const { hrefRepo, hrefWeb, image, alt, title, skills, body } = Astro.props;
     <div class="card animate__animated animate__fadeInUp max-md:w-screen">
         <img src={image} alt={alt} class="card-image">
         <div class="card-content">
-            <h2 class="card-title animate__animated animate__fadeInDown">{title}</h2>
+            <div class="-z-10 backdrop-blur-3xl absolute top-0 bottom-0 left-0 right-0"></div>
+            <h2 class="card-title text-black animate__animated animate__fadeInDown">{title}</h2>
             <p class="card-description animate__animated animate__fadeIn">{body}</p>
             <div class="card-languages animate__animated animate__fadeIn">
                 {
@@ -46,30 +47,16 @@ const { hrefRepo, hrefWeb, image, alt, title, skills, body } = Astro.props;
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap');
 
-
-        @keyframes rgb-background {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
         .card {
             width: 350px;
             height: 500px;
-            background: black;
             border-radius: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Sombra más amplia para profundidad */
             overflow: hidden;
-            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-            backdrop-filter: blur(10px);
             transform-style: preserve-3d;
             perspective: 1000px;
         }
 
-        .card:hover {
-            transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
-            box-shadow: 0 15px 40px rgba(229, 245, 4, 0.5);
-        }
 
         .card-image {
             width: 100%;
@@ -84,7 +71,7 @@ const { hrefRepo, hrefWeb, image, alt, title, skills, body } = Astro.props;
 
         .card-content {
             padding: 25px;
-            position: relative;
+            background: rgba(255, 255, 255, 0.123); /* Fondo blanco con transparencia */
         }
 
         .card-title {
@@ -92,13 +79,12 @@ const { hrefRepo, hrefWeb, image, alt, title, skills, body } = Astro.props;
             font-size: 28px;
             font-weight: 700;
             margin-bottom: 15px;
-            color: #f1f506;
             text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
         }
 
         .card-description {
             font-size: 16px;
-            color: #ddd;
+            color: #080808;
             margin-bottom: 20px;
             line-height: 1.6;
         }
